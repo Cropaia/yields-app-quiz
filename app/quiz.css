@@ -1,0 +1,114 @@
+html {
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+body {
+    /* Fix for issue 45: Changed root font size in spectre.css 0.3.1 */
+    font-size: 1.4rem;
+
+    padding-bottom: 10px;
+    padding-top: 70px;
+}
+
+.btn {
+    /* Fix for issue 45: Removed border radius for buttons */
+    border-radius: 3px;
+    /* Fix for issue 45: Changed root font size in spectre.css 0.3.1 */
+    font-size: 1.4rem;
+    height: 3.2rem !important;
+}
+
+.form-input {
+    /* Fix for issue 45: Changed root font size in spectre.css 0.3.1 */
+    font-size: 1.4rem !important;
+    height: 3.2rem !important;
+}
+
+.form-label {
+    /* Fix for issue 45: Changed root font size in spectre.css 0.3.1 */
+    line-height: 1.4rem !important;
+}
+
+.container.grid-480 {
+    /* Fix for issue 45: grid-480 was removed in spectre.css 0.5.0 */
+    max-width: 50rem;
+}
+
+.divider {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.nav {
+    z-index: 300;
+}
+
+.nav-title {
+    font-size: 2rem;
+    font-weight: bold;
+
+    /* Fix for issue 45: Title wraps around if too long */
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.nav-icon {
+    height: 3rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.quiz-answer-box {
+    border: .1rem solid #6aaf08;
+    border-radius: .3rem;
+    display: block;
+    font-size: 1.4rem;
+    /*height: 3.2rem;*/
+    margin-top: 5px;
+    padding: .7rem 1.5rem;
+    width: 100%;
+}
+
+.quiz-answer-box-highlight {
+    background-color: lightgray;
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+h3 {
+    /* Fix for issue 45: Changed root font size in spectre.css 0.3.1 */
+    font-size: 3rem !important;
+
+    margin-top: 2rem;
+}
+
+h4 {
+    /* Fix for issue 45: Changed root font size in spectre.css 0.3.1 */
+    font-size: 2.6rem !important;
+}
+
+h5 {
+    /* Fix for issue 45: Changed root font size in spectre.css 0.3.1 */
+    font-size: 2.2rem !important;
+}
+
+h6 {
+    /* Fix for issue 45: Changed root font size in spectre.css 0.3.1 */
+    font-size: 1.8rem !important;
+}
+
+/* Fix for #34 */
+[disabled], .disabled {
+    cursor: default;
+    opacity: .5;
+    pointer-events: none;
+}

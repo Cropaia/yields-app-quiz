@@ -1,0 +1,73 @@
+uid: math
+tags: [math]
+content:
+- header1: Your $math$ knowledge
+- text: "What is the solution of the following integral:"
+- text: $\int x \cdot e^x dx$
+- task_mc_one_correct:
+    correct_answer:
+    - $e^x (x-1)$
+    wrong_answers:
+    - $e^x$
+    - $e^x (x+1)$
+    - $e^x x + e^x$
+- separator
+- text: "Who discovered the following identity:"
+- text: >
+    $
+    \frac{1}{\pi} =
+    \frac{2 \sqrt{2}}{9801}
+    \sum_{k=0}^{\infty}
+    \frac{(4k)!(1103+26390k)}{(k!)^{4} 396^{4k}}
+    $
+- task_text:
+    correct_answers: [Ramanujan]
+    max_len: 20
+- afterword: >
+    Srinivasa Ramanujan (22 December 1887 – 26 April 1920) was an Indian mathematician
+    renown for his contributions to mathematical analysis, number theory,
+    infinite series and continued fractions.
+- separator
+- text: "Compute the following matrix product:"
+- text: >
+    $
+    \begin{bmatrix}
+    4 & 6 \\
+    1 & 3
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+    1 & 2 \\
+    1 & 0
+    \end{bmatrix}
+    =
+    \ldots
+    $
+- task_mc_one_correct:
+    correct_answer:
+    - >
+        $\begin{bmatrix}
+        10 & 8 \\
+        4 & 2
+        \end{bmatrix}$
+    wrong_answers:
+    - >
+        $\begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+        \end{bmatrix}$
+    - >
+        $\begin{bmatrix}
+        10 & 8 \\
+        2 & 4
+        \end{bmatrix}$
+    - >
+        $\begin{bmatrix}
+        8 & 10 \\
+        4 & 2
+        \end{bmatrix}$
+    - >
+        $\begin{bmatrix}
+        10 & 8 \\
+        8 & 4
+        \end{bmatrix}$

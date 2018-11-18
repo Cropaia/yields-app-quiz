@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(http-equiv="x-ua-compatible", content="ie=edge")
+        link(rel="icon", href="/public/favicon.png")
+        title= title
+        meta(name="description", content=config.description)
+        //- Open Graph for Facebook
+        meta(property="og:title", content=config.title)
+        meta(property="og:description", content=config.description)
+        meta(property="og:image", content=config.url+"/public/favicon.png")
+        meta(property="og:url", content=config.url)
+        meta(property="og:type", content="website")
+        //- Additional Twitter tags
+        meta(name="twitter:card", content="summary")
+        //- Static quiz config
+        script(id="config", type="application/json")!= configString
+        script(id="tags_with_count", type="application/json")!= tagsWithCount
+    body
+        div(class="container grid-480", id="app")
+            //- For our fellow NoScript users
+            noscript
+                div(class="toast toast-danger")
+                    | For full functionality of this site it is necessary to enable JavaScript.
+                    | Here are the <a href="http://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">
+                    | instructions how to enable JavaScript in your web browser</a>.
+        script(type="text/javascript", src="/static/bundle.js")

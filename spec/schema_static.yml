@@ -1,0 +1,79 @@
+uid: str()
+tags: list(str())
+content: >-
+    list(
+        enum("separator"),
+        include("header1_chunk"),
+        include("header2_chunk"),
+        include("header3_chunk"),
+        include("text_chunk"),
+        include("hint_chunk"),
+        include("afterword_chunk"),
+        include("image_chunk"),
+        include("task_chunk_mc_one_correct"),
+        include("task_chunk_mc_multiple_correct"),
+        include("task_chunk_number"),
+        include("task_chunk_text"),
+        )
+
+---
+
+header1_chunk:
+    header1: str()
+
+header2_chunk:
+    header2: str()
+
+header3_chunk:
+    header3: str()
+
+text_chunk:
+    text: str()
+
+hint_chunk:
+    hint: str()
+
+afterword_chunk:
+    afterword: str()
+
+# Responsive Image
+image_chunk:
+    image: include("image_attributes")
+image_attributes:
+    description: str()
+    source_1x: str()
+    source_2x: str(required=False)
+    source_4x: str(required=False)
+    width: num(min=0, max=100, required=False)
+
+# Task: Multiple choice, one correct answer
+task_chunk_mc_one_correct:
+    task_mc_one_correct: include("answers_mc_one_correct")
+answers_mc_one_correct:
+    correct_answer: list(str(), min=1, max=1)
+    wrong_answers: list(str(), min=1)
+
+# Task: Multiple choice, multiple correct answers
+task_chunk_mc_multiple_correct:
+    task_mc_multiple_correct: include("answers_mc_multiple_correct")
+answers_mc_multiple_correct:
+    correct_answers: list(str(), min=1)
+    wrong_answers: list(str(), min=1)
+
+# Task: Enter number
+task_chunk_number:
+    task_number: include("answers_number")
+answers_number:
+    before: str(required=False) # maybe it should be required
+    correct_answer: num()
+    abs_tol: num(min=0) # tolerance must be non-negative
+    after: str(required=False) # e.g. for units
+
+# Task: Enter text
+task_chunk_text:
+    task_text: include("answers_text")
+answers_text:
+    before: str(required=False) # maybe it should be required
+    correct_answers: list(str(), min=1) # the first element will be displayed as the correct one
+    max_len: num(min=1) # max. length of the text input, at least 1 char
+    after: str(required=False) # e.g. for units

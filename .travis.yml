@@ -1,0 +1,36 @@
+language: node_js
+node_js:
+  - "6"
+  - "7"
+  - "8"
+
+matrix:
+  allow_failures:
+    - node_js: "7"
+
+sudo: false
+
+# Install Python for schema validation
+addons:
+  apt:
+    packages:
+      - python
+      - python-pip
+      - python-virtualenv
+
+# Install prerequisites for the schema validation
+before_install:
+  - virtualenv pyvalidator
+  - source pyvalidator/bin/activate
+  - pip install -r ./spec/requirements.txt
+
+script:
+  - python ./spec/validate_question.py "./spec/schema_static.yml" "./example-quiz/"
+  - npm run build
+  - npm run doc
+  - npm run coverage
+  - npm run lint
+  - if [ "$TRAVIS_NODE_VERSION" = "8" ]; then npm run saucelabs; fi
+
+after_success:
+  - if [ "$TRAVIS_NODE_VERSION" = "8" ]; then npm run publish_to_coveralls; fi

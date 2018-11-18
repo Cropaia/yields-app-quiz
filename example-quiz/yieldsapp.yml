@@ -1,0 +1,93 @@
+# Lesson learned: Always obfuscate filenames!
+
+# All images are CC0 (public domain)
+
+uid: yieldsapp
+tags: [yieldsapp]
+content:
+- header1: YieldsApp
+- image:
+    description: YieldsApp
+    source_1x: /public/image1.png
+    source_2x: /public/image2.jpg
+    source_3x: /public/image3.jpg
+- results:
+    Alternaria: 
+        - 6
+    TSWV: 
+        - 10
+    Septoria: 
+        - 13
+        - 19
+    Late blight: 
+        - 16
+        - 26
+- text: Do you see symptoms on leaves?
+- task_calculate:
+    answers:
+    - 'Yes'
+    - 'No'
+    compute: 1
+- separator
+- text: Do the lesions have circular/round shape?
+- task_calculate:
+    answers:
+        - Yes
+        - No
+    compute: 2
+- separator
+- text: If round spots (not angular, not undefined shape) do you see 'target' like concentric circles?
+- task_calculate:
+    answers:
+        - Yes
+        - No
+    compute: 3
+- separator
+- text: Are the concentric, 'target-like' circles yellow?
+- task_calculate:
+    answers:
+        - Yes
+        - No
+    compute: 4
+- separator
+- text: Are the spots small, angular? Do they have black/brown borders and lighter color in the center?
+- task_calculate:
+    answers:
+        - Yes
+        - No
+    compute: 5
+- separator
+- text: Do you see black dots small inside the spots/lesions?
+- task_calculate:
+    answers:
+        - Yes
+        - No
+    compute: 6
+- separator
+- text: Do the lesions have irregular shape (undefined defined shape)?
+- task_calculate:
+    answers:
+        - Yes
+        - No
+    compute: 7
+- separator
+- text: If irregular shape, are the lesions relatively large?
+- task_calculate:
+    answers:
+        - Yes
+        - No
+    compute: 8
+- separator
+- text: Do you see gray/white moldy growth on the lesions?
+- task_calculate:
+    answers:
+        - Yes
+        - No
+    compute: 10
+- separator
+- text: Are the lesions water-soaked?
+- task_calculate:
+    answers:
+        - Yes
+        - No
+    compute: 13

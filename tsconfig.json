@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "target": "es5",
+        "moduleResolution": "node"
+    },
+    "include": [
+        "node_modules/@types"
+    ],
+    "compileOnSave": false
+}
