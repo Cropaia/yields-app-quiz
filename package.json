@@ -18,7 +18,8 @@
     "saucelabs": "karma start karma-saucelabs.conf.js",
     "coverage": "istanbul cover _mocha --report lcovonly -- lib/test  --exit",
     "publish_to_coveralls": "cat ./coverage/lcov.info | coveralls",
-    "export_stats": "webpack --json > stats.json"
+    "export_stats": "webpack --json > stats.json",
+    "start": "node server example-quiz"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
@@ -45,10 +46,6 @@
     "webpack": "^3.10.0",
     "yamljs": "^0.3.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tum-rt/web-quiz.git"
-  },
   "devDependencies": {
     "@types/core-js": "^0.9.46",
     "@types/mocha": "^2.2.48",
@@ -70,5 +67,8 @@
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.21.0"
   },
-  "apidoc": {}
+  "apidoc": {},
+  "engines": {
+    "node": "8.x"
+  }
 }
