@@ -19,7 +19,7 @@
     "coverage": "istanbul cover _mocha --report lcovonly -- lib/test  --exit",
     "publish_to_coveralls": "cat ./coverage/lcov.info | coveralls",
     "export_stats": "webpack --json > stats.json",
-    "start": "npm run buildp && node server example-quiz"
+    "start": "node server example-quiz"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
